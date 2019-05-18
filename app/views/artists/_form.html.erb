@@ -1,0 +1,7 @@
+<%= form_with model: @Artist, local:true, class:"ui form" do |f| %>
+  <div class = "field">
+    <%= f.label "Artist" %>
+    <%= f.text_field :name, placeholder: "Artist Name", required:true, autofocus:true %>
+    <%= f.submit nil, class:"ui button"%>
+  </div>
+<% end %>

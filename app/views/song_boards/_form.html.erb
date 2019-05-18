@@ -1,0 +1,7 @@
+<%= form_with model: @board, local:true, class:"ui form" do |f| %>
+  <div class = "field">
+    <%= f.label "Board Name" %>
+    <%= f.text_field :name, placeholder: "Board Name", required:true, autofocus:true %>
+    <%= f.submit %>
+  </div>
+<% end %>

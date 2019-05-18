@@ -1,0 +1,25 @@
+<h1 class="ui center aligned icon header">
+  <i class="circular headphones icon"></i> ARTISTS 
+</h1>
+
+
+<div class="ui link six doubling cards">
+  <% @Artists.each do |artist| %>
+    <div class="card">
+      <div class="image">
+          <img src="<%= artist.image %>" /> 
+      </div>
+      <div class="content">
+        <%= link_to "#{artist.name}", artist_songs_path(artist), class: "header" %>
+      </div>
+      <div class="extra content">
+        <%= link_to(edit_artist_path(artist)) do%>
+          <div class="ui basic green button">EDIT</div>
+        <% end %>    
+        <%= link_to(artist, method: :delete) do%>
+          <div class="ui basic red button">DELETE</div>
+        <% end %>
+      </div>
+    </div> 
+  <% end %>
+</div>

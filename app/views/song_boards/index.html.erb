@@ -1,0 +1,28 @@
+<h1 class="ui center aligned icon header">
+  <i class="circular headphones icon"></i> Genres 
+</h1>
+
+<div class="ui grid">
+  <% @boards.each do |board| %>
+    <div class ="sixteen wide mobile eight wide tablet four wide computer column">
+      <div class="ui link cards">
+        <div class="card">
+            <div class="image">
+                <img src="<%= board.image %>" /> 
+            </div>
+            <div class="content">
+              <%= link_to "#{board.name}", board, class: "header" %>
+            </div>
+            <div class="extra content">
+              <div class="ui basic green button">
+                <%= link_to "edit", edit_song_board_path(board) %>
+              </div>
+                <%= link_to(board, method: :delete) do%>
+                  <div class="ui basic red button">Delete</div>
+                <% end %>
+            </div>
+          </div>  
+        </div>
+      </div>
+  <% end %>
+</div>
