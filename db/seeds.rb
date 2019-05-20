@@ -87,5 +87,5 @@
 # end
 
 Song.all.each do |song|
-  song.update(board_id: rand(1..17))
+  song.update(song_board_id: rand(1..17))
 end

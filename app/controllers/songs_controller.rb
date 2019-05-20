@@ -1,9 +1,14 @@
 class SongsController < ApplicationController
   before_action :set_artist, only: [:index]
+  before_action :set_board, only: [:board_index]
   before_action :set_song, only: [:show, :edit, :update, :destroy, :increment_rating]
 
   def index
     @Songs = @Artist.songs
+  end
+
+  def board_index
+    @Songs = @Board.songs
   end
 
   def show
@@ -16,7 +21,7 @@ class SongsController < ApplicationController
   end
 
   def set_board 
-    @Board = SongBoard.find(params[:board_id])
+    @Board = SongBoard.find(params[:id])
   end
 
   def set_song

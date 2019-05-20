@@ -1,3 +1,3 @@
 class SongBoard < ApplicationRecord
-has_many :Songs
+has_many :songs
 end
