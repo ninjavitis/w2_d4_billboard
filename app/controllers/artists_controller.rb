@@ -23,7 +23,6 @@ class ArtistsController < ApplicationController
     else
       render :new
     end
-
   end
   
   def update
@@ -39,8 +38,10 @@ class ArtistsController < ApplicationController
     redirect_to artists_path
   end
 
-  private
   
+  #######
+  private
+  #######
 
   def set_artist
     @Artist = Artist.find(params[:id])

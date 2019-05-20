@@ -11,6 +11,7 @@
       </div>
       <div class="content">
         <%= link_to "#{artist.name}", artist_songs_path(artist), class: "header" %>
+        (<%= artist.songs.count %>)
       </div>
       <div class="extra content">
         <%= link_to(edit_artist_path(artist)) do%>

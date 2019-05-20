@@ -11,7 +11,7 @@
                 <img src="<%= board.image %>" /> 
             </div>
             <div class="content">
-              <%= link_to "#{board.name}", board, class: "header" %>
+              <%= link_to "#{board.name}", song_board_songs_path(board), class: "header" %>
             </div>
             <div class="extra content">
               <div class="ui basic green button">

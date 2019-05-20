@@ -48,4 +48,7 @@ class SongBoardsController < ApplicationController
   def set_board
     @board = SongBoard.find(params[:id])
   end
+
+
+
 end

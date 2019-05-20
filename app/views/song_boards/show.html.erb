@@ -1,2 +1,29 @@
-<h1>SongBoards#show</h1>
-<p>Find me in app/views/song_boards/show.html.erb</p>
+<h1 class="ui center aligned icon header">
+  <i class="circular headphones icon"></i> <%= @board.name %> 
+</h1>
+
+
+# <div class="ui six items">
+#   <% @Songs.each do |song| %>
+#     <div class="item">
+#       <div class="ui tiny image">
+#         <img src="">
+#       </div>
+#       <div class="ui list">
+#         <div  class = "item">
+#           <div class="header"><%= "#{song[:name]}" %></div>
+#           <div class="small"><%= "Album: #{song[:album]}" %></div>
+#           <div class="small"><%= "Year: #{song[:year]}" %></div>
+#           <div class="ui labeled button" tabindex="0">
+#           <button class="ui mini red button">
+#             <i class="headphones icon"></i> Rating
+#           </button>
+#           <a class="ui basic red left pointing label">
+#           <%= "#{song[:rating]}" %>
+#           </a>
+#         </div>
+#         </div>
+#       </div>
+#     </div>
+#   <% end %>
+# </div>
